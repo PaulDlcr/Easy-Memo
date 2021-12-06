@@ -1,0 +1,27 @@
+fr/BDST/easymemo/Model/ToDoModel.java
+ fr.BDST.easymemo.Model.ToDoModel
+fr/BDST/easymemo/BuildConfig.java
+ fr.BDST.easymemo.BuildConfig
+fr/BDST/easymemo/MainActivity.java
+ fr.BDST.easymemo.MainActivity
+ fr.BDST.easymemo.MainActivity$1
+fr/BDST/easymemo/Adapter/ToDoAdapter.java
+ fr.BDST.easymemo.Adapter.ToDoAdapter
+ fr.BDST.easymemo.Adapter.ToDoAdapter$ViewHolder
+fr/BDST/easymemo/databinding/TaskLayoutBinding.java
+ fr.BDST.easymemo.databinding.TaskLayoutBinding
+fr/BDST/easymemo/databinding/ActivityMainBinding.java
+ fr.BDST.easymemo.databinding.ActivityMainBinding
+fr/BDST/easymemo/databinding/ActivitySplashBinding.java
+ fr.BDST.easymemo.databinding.ActivitySplashBinding
+fr/BDST/easymemo/AddNewTask.java
+ fr.BDST.easymemo.AddNewTask
+ fr.BDST.easymemo.AddNewTask$1
+ fr.BDST.easymemo.AddNewTask$2
+fr/BDST/easymemo/databinding/NewTasksBinding.java
+ fr.BDST.easymemo.databinding.NewTasksBinding
+fr/BDST/easymemo/DialogCloseListener.java
+ fr.BDST.easymemo.DialogCloseListener
+fr/BDST/easymemo/SplashActivity.java
+ fr.BDST.easymemo.SplashActivity
+ fr.BDST.easymemo.SplashActivity$1

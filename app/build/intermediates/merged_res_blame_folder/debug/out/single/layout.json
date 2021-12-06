@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\Docs\\Easy-Memo-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\new_tasks.xml",
+        "source": "D:\\Docs\\Easy-Memo-main\\app\\src\\main\\res\\layout\\new_tasks.xml"
+    },
+    {
+        "merged": "D:\\Docs\\Easy-Memo-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_splash.xml",
+        "source": "D:\\Docs\\Easy-Memo-main\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "D:\\Docs\\Easy-Memo-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\task_layout.xml",
+        "source": "D:\\Docs\\Easy-Memo-main\\app\\src\\main\\res\\layout\\task_layout.xml"
+    },
+    {
+        "merged": "D:\\Docs\\Easy-Memo-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\Docs\\Easy-Memo-main\\app\\src\\main\\res\\layout\\activity_main.xml"
+    }
+]

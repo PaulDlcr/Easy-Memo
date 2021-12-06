@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "26504521947",
+    "project_id": "easymemo-abbff",
+    "storage_bucket": "easymemo-abbff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26504521947:android:ed5ba032679c5d6724c4fe",
+        "android_client_info": {
+          "package_name": "fr.BDST.easymemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26504521947-evdp4itoluhvmvol5rvhpca46ho1ca0g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV4b4Vb8TVciXEx3syOt9AbdWYXxa7MDY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "26504521947-evdp4itoluhvmvol5rvhpca46ho1ca0g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

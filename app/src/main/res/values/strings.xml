@@ -1,0 +1,29 @@
+<resources>
+    <!--Nom app-->
+    <string name="app_name">EasyMemo</string>
+
+    <!-- Page Connexion -->
+    <string name="connection_title">Connexion</string>
+    <string name="connection_text_1">Identifiant :</string>
+    <string name="connection_text_2">Mot de passe :</string>
+    <string name="connection_text_3">créer utilisateur</string>
+
+    <!-- Page Toutes les notes -->
+    <string name="note_title">Toutes les notes</string>
+    <string name="note_text_1">Rechercher une note</string>
+    <string name="note_text_2">Titre du mémo</string>
+
+    <!-- Page Création mémo -->
+    <string name="create_memo_title">Titre du memo</string>
+    <string name="create_memo_text_1">Date et heure de création du mémo</string>
+    <string name="create_memo_text_2">Catégorie</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+</resources>

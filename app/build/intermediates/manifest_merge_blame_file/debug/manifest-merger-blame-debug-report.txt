@@ -1,0 +1,139 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="fr.BDST.easymemo"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml
+10
+11    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+12    <!-- <uses-sdk android:minSdkVersion="14" /> -->
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\delac\.gradle\caches\transforms-3\a06b6949014dd8e04b014e6b84aa47d2\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:13:5-79
+13-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\delac\.gradle\caches\transforms-3\a06b6949014dd8e04b014e6b84aa47d2\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:13:22-76
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\delac\.gradle\caches\transforms-3\a06b6949014dd8e04b014e6b84aa47d2\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:14:5-67
+14-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\delac\.gradle\caches\transforms-3\a06b6949014dd8e04b014e6b84aa47d2\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:14:22-64
+15
+16    <application
+16-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:5:5-28:19
+17        android:allowBackup="true"
+17-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:6:9-35
+18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+18-->[androidx.core:core:1.7.0] C:\Users\delac\.gradle\caches\transforms-3\901d52ea4e2e90b7afacd09cad058809\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+19        android:debuggable="true"
+20        android:icon="@mipmap/ic_launcher"
+20-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:7:9-43
+21        android:label="@string/app_name"
+21-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:8:9-41
+22        android:roundIcon="@mipmap/ic_launcher_round"
+22-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:9:9-54
+23        android:supportsRtl="true"
+23-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:10:9-35
+24        android:testOnly="true"
+25        android:theme="@style/Theme.EasyMemo" >
+25-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:11:9-46
+26        <activity
+26-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:12:9-20:20
+27            android:name="fr.BDST.easymemo.SplashActivity"
+27-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:13:13-43
+28            android:exported="true" >
+28-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:14:13-36
+29            <intent-filter>
+29-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:15:13-19:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:16:17-69
+30-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:16:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:18:17-77
+32-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:18:27-74
+33            </intent-filter>
+34        </activity>
+35        <activity
+35-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:21:9-23:38
+36            android:name="fr.BDST.easymemo.MainActivity"
+36-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:22:13-41
+37            android:exported="true" />
+37-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:23:13-36
+38
+39        <meta-data
+39-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:25:9-27:57
+40            android:name="preloaded_fonts"
+40-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:26:13-43
+41            android:resource="@array/preloaded_fonts" />
+41-->D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:27:13-54
+42
+43        <service
+43-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\delac\.gradle\caches\transforms-3\a06b6949014dd8e04b014e6b84aa47d2\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:17:9-23:19
+44            android:name="com.google.firebase.components.ComponentDiscoveryService"
+44-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\delac\.gradle\caches\transforms-3\a06b6949014dd8e04b014e6b84aa47d2\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:18:13-84
+45            android:directBootAware="true"
+45-->[com.google.firebase:firebase-common:20.0.0] C:\Users\delac\.gradle\caches\transforms-3\4303a09d5fe7efff8d8a9cb7666e5f52\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:35:13-43
+46            android:exported="false" >
+46-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\delac\.gradle\caches\transforms-3\a06b6949014dd8e04b014e6b84aa47d2\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:19:13-37
+47            <meta-data
+47-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\delac\.gradle\caches\transforms-3\a06b6949014dd8e04b014e6b84aa47d2\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:20:13-22:85
+48                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+48-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\delac\.gradle\caches\transforms-3\a06b6949014dd8e04b014e6b84aa47d2\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:21:17-111
+49                android:value="com.google.firebase.components.ComponentRegistrar" />
+49-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\delac\.gradle\caches\transforms-3\a06b6949014dd8e04b014e6b84aa47d2\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:22:17-82
+50        </service>
+51
+52        <provider
+52-->[com.google.firebase:firebase-common:20.0.0] C:\Users\delac\.gradle\caches\transforms-3\4303a09d5fe7efff8d8a9cb7666e5f52\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
+53            android:name="com.google.firebase.provider.FirebaseInitProvider"
+53-->[com.google.firebase:firebase-common:20.0.0] C:\Users\delac\.gradle\caches\transforms-3\4303a09d5fe7efff8d8a9cb7666e5f52\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
+54            android:authorities="fr.BDST.easymemo.firebaseinitprovider"
+54-->[com.google.firebase:firebase-common:20.0.0] C:\Users\delac\.gradle\caches\transforms-3\4303a09d5fe7efff8d8a9cb7666e5f52\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
+55            android:directBootAware="true"
+55-->[com.google.firebase:firebase-common:20.0.0] C:\Users\delac\.gradle\caches\transforms-3\4303a09d5fe7efff8d8a9cb7666e5f52\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
+56            android:exported="false"
+56-->[com.google.firebase:firebase-common:20.0.0] C:\Users\delac\.gradle\caches\transforms-3\4303a09d5fe7efff8d8a9cb7666e5f52\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
+57            android:initOrder="100" />
+57-->[com.google.firebase:firebase-common:20.0.0] C:\Users\delac\.gradle\caches\transforms-3\4303a09d5fe7efff8d8a9cb7666e5f52\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
+58
+59        <activity
+59-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\delac\.gradle\caches\transforms-3\b8bbe36647423aa4083cff92f6921500\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+60            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+60-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\delac\.gradle\caches\transforms-3\b8bbe36647423aa4083cff92f6921500\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+61            android:exported="false"
+61-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\delac\.gradle\caches\transforms-3\b8bbe36647423aa4083cff92f6921500\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+62            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+62-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\delac\.gradle\caches\transforms-3\b8bbe36647423aa4083cff92f6921500\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+63
+64        <meta-data
+64-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\delac\.gradle\caches\transforms-3\093221cf7243b26b9766b351439ad99d\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+65            android:name="com.google.android.gms.version"
+65-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\delac\.gradle\caches\transforms-3\093221cf7243b26b9766b351439ad99d\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+66            android:value="@integer/google_play_services_version" />
+66-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\delac\.gradle\caches\transforms-3\093221cf7243b26b9766b351439ad99d\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+67
+68        <provider
+68-->[androidx.emoji2:emoji2:1.0.0] C:\Users\delac\.gradle\caches\transforms-3\6987f4662044ee4081cc924cc370758f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+69            android:name="androidx.startup.InitializationProvider"
+69-->[androidx.emoji2:emoji2:1.0.0] C:\Users\delac\.gradle\caches\transforms-3\6987f4662044ee4081cc924cc370758f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+70            android:authorities="fr.BDST.easymemo.androidx-startup"
+70-->[androidx.emoji2:emoji2:1.0.0] C:\Users\delac\.gradle\caches\transforms-3\6987f4662044ee4081cc924cc370758f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+71            android:exported="false" >
+71-->[androidx.emoji2:emoji2:1.0.0] C:\Users\delac\.gradle\caches\transforms-3\6987f4662044ee4081cc924cc370758f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+72            <meta-data
+72-->[androidx.emoji2:emoji2:1.0.0] C:\Users\delac\.gradle\caches\transforms-3\6987f4662044ee4081cc924cc370758f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+73                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+73-->[androidx.emoji2:emoji2:1.0.0] C:\Users\delac\.gradle\caches\transforms-3\6987f4662044ee4081cc924cc370758f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+74                android:value="androidx.startup" />
+74-->[androidx.emoji2:emoji2:1.0.0] C:\Users\delac\.gradle\caches\transforms-3\6987f4662044ee4081cc924cc370758f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+75            <meta-data
+75-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\delac\.gradle\caches\transforms-3\bd2f04a09e83cb1267d9637813feffba\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+76                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+76-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\delac\.gradle\caches\transforms-3\bd2f04a09e83cb1267d9637813feffba\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+77                android:value="androidx.startup" />
+77-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\delac\.gradle\caches\transforms-3\bd2f04a09e83cb1267d9637813feffba\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+78        </provider>
+79    </application>
+80
+81</manifest>
