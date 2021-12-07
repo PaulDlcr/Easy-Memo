@@ -22,6 +22,7 @@ import fr.BDST.easymemo.Model.ToDoModel;
 import fr.BDST.easymemo.R;
 
 public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.MyViewHolder> {
+
     private List<ToDoModel> todoList;
     private MainActivity activity;
     private FirebaseFirestore firestore;
@@ -34,28 +35,56 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.MyViewHolder> 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(activity).inflate(R.layout.task_layout, parent, false);
+        View view = LayoutInflater.from(activity).inflate(R.layout.task_layout , parent , false);
         firestore = FirebaseFirestore.getInstance();
+
         return new MyViewHolder(view);
+    }
+    public Context getContext(){
+        return activity;
+    }
+
+    public void deleteTask(int position){
+        ToDoModel toDoModel = todoList.get(position);
+        firestore.collection("task").document(toDoModel.TaskId).delete();
+        todoList.remove(position);
+        notifyItemRemoved(position);
+    }
+
+    public void editTask(int position){
+        ToDoModel toDoModel = todoList.get(position);
+
+        Bundle bundle = new Bundle();
+        bundle.putString("task" , toDoModel.getTask());
+        bundle.putString("due" , toDoModel.getDue());
+        bundle.putString("id" , toDoModel.TaskId);
+
+        AddNewTask addNewTask = new AddNewTask();
+        addNewTask.setArguments(bundle);
+        addNewTask.show(activity.getSupportFragmentManager() , addNewTask.getTag());
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+
         ToDoModel toDoModel = todoList.get(position);
-        holder.mCheckbox.setText(toDoModel.getTask());
+        holder.mCheckBox.setText(toDoModel.getTask());
+
         holder.mDueDateTv.setText("A faire le " + toDoModel.getDue());
 
-        holder.mCheckbox.setChecked(toBoolean(toDoModel.getStatus()));
-        holder.mCheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        holder.mCheckBox.setChecked(toBoolean(toDoModel.getStatus()));
+
+        holder.mCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
-                    firestore.collection("task").document(toDoModel.TaskId).update("status", 1);
+                    firestore.collection("task").document(toDoModel.TaskId).update("status" , 1);
                 }else{
-                    firestore.collection("task").document(toDoModel.TaskId).update("status", 0);
+                    firestore.collection("task").document(toDoModel.TaskId).update("status" , 0);
                 }
             }
         });
+
     }
 
     private boolean toBoolean(int status){
@@ -70,12 +99,14 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.MyViewHolder> 
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
         TextView mDueDateTv;
-        CheckBox mCheckbox;
-        public MyViewHolder(@NonNull View itemView){
+        CheckBox mCheckBox;
+
+        public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            mDueDateTv = itemView.findViewById(R.id.set_due_tv);
-            mCheckbox = itemView.findViewById(R.id.mcheckbox);
+            mDueDateTv = itemView.findViewById(R.id.due_date_tv);
+            mCheckBox = itemView.findViewById(R.id.mcheckbox);
+
         }
     }
 }

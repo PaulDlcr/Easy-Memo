@@ -10,17 +10,28 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:padding="8dp">
 
         <CheckBox
             android:id="@+id/mcheckbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:buttonTint="@android:color/holo_green_dark"
             android:paddingStart="8dp"
             tools:text="Go to the market and bring vegetables immediately today." />
+
+        <TextView
+            android:id="@+id/due_date_tv"
+            style="@style/DefaultLowerTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/mcheckbox"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="56dp"
+            android:text="31-3-2020" />
+
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

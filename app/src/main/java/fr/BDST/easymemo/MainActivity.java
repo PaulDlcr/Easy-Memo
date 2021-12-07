@@ -2,6 +2,7 @@ package fr.BDST.easymemo;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -14,6 +15,8 @@ import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.ListenerRegistration;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
@@ -23,20 +26,21 @@ import java.util.List;
 import fr.BDST.easymemo.Adapter.ToDoAdapter;
 import fr.BDST.easymemo.Model.ToDoModel;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements DialogCloseListener{
 
     private RecyclerView tasksRecyclerView;
     private ToDoAdapter tasksAdapter;
     private FloatingActionButton fab;
     private FirebaseFirestore firestore;
     private List<ToDoModel> taskList;
+    private Query query;
+    private ListenerRegistration listenerRegistration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
-
 
         tasksRecyclerView = findViewById(R.id.tasksRecyclerView);
         fab = findViewById(R.id.fab);
@@ -55,23 +59,35 @@ public class MainActivity extends AppCompatActivity {
         taskList = new ArrayList<>();
         tasksAdapter = new ToDoAdapter(MainActivity.this, taskList);
 
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new TouchHelper(tasksAdapter));
+        itemTouchHelper.attachToRecyclerView(tasksRecyclerView);
         tasksRecyclerView.setAdapter(tasksAdapter);
+        showData();
     }
     private void showData(){
-        firestore.collection("task").addSnapshotListener(new EventListener<QuerySnapshot>() {
+        query = firestore.collection("task").orderBy("time" , Query.Direction.DESCENDING);
+
+        listenerRegistration = query.addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
                 for (DocumentChange documentChange : value.getDocumentChanges()){
                     if (documentChange.getType() == DocumentChange.Type.ADDED){
                         String id = documentChange.getDocument().getId();
-                        ToDoModel toDoModel = documentChange.getDocument().toObject(ToDoModel.class).withID(id);
+                        ToDoModel toDoModel = documentChange.getDocument().toObject(ToDoModel.class).withId(id);
                         taskList.add(toDoModel);
                         tasksAdapter.notifyDataSetChanged();
                     }
                 }
-                Collections.reverse(taskList);
+                listenerRegistration.remove();
             }
         });
+    }
+
+    @Override
+    public void handleDialogClose(DialogInterface dialog) {
+        taskList.clear();
+        showData();
+        tasksAdapter.notifyDataSetChanged();
     }
 }
 

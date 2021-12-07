@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
@@ -20,10 +21,15 @@ public final class TaskLayoutBinding implements ViewBinding {
   private final CardView rootView;
 
   @NonNull
+  public final TextView dueDateTv;
+
+  @NonNull
   public final CheckBox mcheckbox;
 
-  private TaskLayoutBinding(@NonNull CardView rootView, @NonNull CheckBox mcheckbox) {
+  private TaskLayoutBinding(@NonNull CardView rootView, @NonNull TextView dueDateTv,
+      @NonNull CheckBox mcheckbox) {
     this.rootView = rootView;
+    this.dueDateTv = dueDateTv;
     this.mcheckbox = mcheckbox;
   }
 
@@ -54,13 +60,19 @@ public final class TaskLayoutBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.due_date_tv;
+      TextView dueDateTv = ViewBindings.findChildViewById(rootView, id);
+      if (dueDateTv == null) {
+        break missingId;
+      }
+
       id = R.id.mcheckbox;
       CheckBox mcheckbox = ViewBindings.findChildViewById(rootView, id);
       if (mcheckbox == null) {
         break missingId;
       }
 
-      return new TaskLayoutBinding((CardView) rootView, mcheckbox);
+      return new TaskLayoutBinding((CardView) rootView, dueDateTv, mcheckbox);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

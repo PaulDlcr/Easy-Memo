@@ -7,6 +7,7 @@ INJECTED from D:\Docs\Easy-Memo-main\app\src\main\AndroidManifest.xml:2:1-30:12
 MERGED from [androidx.databinding:viewbinding:7.0.3] C:\Users\delac\.gradle\caches\transforms-3\a46a0fb367134be7a3af2bcdf0677f0c\transformed\jetified-viewbinding-7.0.3\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\delac\.gradle\caches\transforms-3\74272dcd07d8058d149aa598ef67abf1\transformed\material-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.2] C:\Users\delac\.gradle\caches\transforms-3\50b4e71313c9a3f98406fcc4dfb19e6b\transformed\constraintlayout-2.1.2\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.xabaras:RecyclerViewSwipeDecorator:1.3] C:\Users\delac\.gradle\caches\transforms-3\11ec66bfca0a5bcfd494866dfdc17246\transformed\jetified-RecyclerViewSwipeDecorator-1.3\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.appcompat:appcompat:1.4.0] C:\Users\delac\.gradle\caches\transforms-3\a530604be97428c79946ebfc4cea993c\transformed\appcompat-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-firestore:24.0.0] C:\Users\delac\.gradle\caches\transforms-3\a06b6949014dd8e04b014e6b84aa47d2\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:2:1-26:12
 MERGED from [androidx.recyclerview:recyclerview-selection:1.1.0] C:\Users\delac\.gradle\caches\transforms-3\95491304a18746ae4cb204ee0a43210b\transformed\recyclerview-selection-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -158,6 +159,8 @@ MERGED from [com.google.android.material:material:1.4.0] C:\Users\delac\.gradle\
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\delac\.gradle\caches\transforms-3\74272dcd07d8058d149aa598ef67abf1\transformed\material-1.4.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.2] C:\Users\delac\.gradle\caches\transforms-3\50b4e71313c9a3f98406fcc4dfb19e6b\transformed\constraintlayout-2.1.2\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.2] C:\Users\delac\.gradle\caches\transforms-3\50b4e71313c9a3f98406fcc4dfb19e6b\transformed\constraintlayout-2.1.2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.xabaras:RecyclerViewSwipeDecorator:1.3] C:\Users\delac\.gradle\caches\transforms-3\11ec66bfca0a5bcfd494866dfdc17246\transformed\jetified-RecyclerViewSwipeDecorator-1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.xabaras:RecyclerViewSwipeDecorator:1.3] C:\Users\delac\.gradle\caches\transforms-3\11ec66bfca0a5bcfd494866dfdc17246\transformed\jetified-RecyclerViewSwipeDecorator-1.3\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat:1.4.0] C:\Users\delac\.gradle\caches\transforms-3\a530604be97428c79946ebfc4cea993c\transformed\appcompat-1.4.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.4.0] C:\Users\delac\.gradle\caches\transforms-3\a530604be97428c79946ebfc4cea993c\transformed\appcompat-1.4.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-firestore:24.0.0] C:\Users\delac\.gradle\caches\transforms-3\a06b6949014dd8e04b014e6b84aa47d2\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:7:5-9:41

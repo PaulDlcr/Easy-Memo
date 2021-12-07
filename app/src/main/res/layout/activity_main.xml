@@ -38,6 +38,7 @@
         android:backgroundTint="@color/slate_grey"
         android:src="@drawable/ic_baseline_add"
         app:backgroundTint="@color/slate_grey"
+        app:tint="@color/sunray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
